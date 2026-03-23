@@ -1,8 +1,74 @@
-# Subscription Business Health Overview
+# Subscription Business Health Dashboard
 
-This project presents an executive-level subscription analytics dashboard designed to evaluate revenue performance, retention behavior, and churn dynamics across subscription plan tiers.
+Executive-level analytics dashboard designed to evaluate subscription performance, revenue growth, retention behavior, and churn dynamics across plan tiers.
 
-The goal of the analysis is to move beyond surface-level metrics and provide a clear view of subscription health using cohort-based retention modeling and plan-level diagnostics. The dashboard is structured to support product, growth, and revenue decision-making in a subscription-based business.
+This project reflects how subscription-based businesses analyze monetization, lifecycle performance, and customer retention to inform product, pricing, and growth strategies.
+
+---
+
+## Business Problem
+
+Subscription businesses often track high-level metrics like revenue and churn, but lack a clear understanding of *why* customers leave and how retention behavior impacts long-term revenue.
+
+Common challenges include:
+
+- Limited visibility into how retention changes over time  
+- Difficulty separating churn rate from actual revenue impact  
+- Lack of clarity on whether churn is driven by pricing, product, or lifecycle issues  
+- Inability to connect subscriber behavior to revenue performance  
+
+---
+
+## Objective
+
+Build an executive-ready dashboard that helps answer:
+
+- How is subscription revenue growing over time?  
+- What are the true drivers of churn and retention?  
+- Which plan tiers contribute most to revenue and churn risk?  
+- Where should the business focus to improve retention and lifetime value?  
+
+---
+
+## Approach
+
+Developed a structured analytics framework combining revenue modeling, cohort analysis, and plan-level segmentation.
+
+Key components:
+
+- Built KPI layer to track subscribers, MRR, and churn  
+- Developed cohort-based retention modeling using time-indexed analysis  
+- Segmented performance by subscription plan to isolate behavioral patterns  
+- Designed visualizations to separate churn rate from churn impact  
+- Focused on executive usability and clear decision-making outputs  
+
+---
+
+## Key Metrics
+
+- Active Subscribers  
+- Monthly Recurring Revenue (MRR)  
+- Churn Rate  
+- Retention Rate by Cohort  
+- Churn Volume by Plan  
+
+---
+
+## Key Insights
+
+- Retention decay follows a consistent pattern across plan tiers, indicating systemic lifecycle issues rather than pricing-specific problems  
+- Revenue growth is driven disproportionately by higher-tier plans, increasing concentration risk  
+- Churn volume and churn rate tell different stories, and both must be evaluated together  
+- Early lifecycle drop-off presents the largest opportunity for improving long-term retention  
+
+---
+
+## Recommendations
+
+- Improve onboarding and early user experience to reduce initial churn  
+- Monitor revenue concentration across plans to mitigate dependency risk  
+- Prioritize retention initiatives based on churn volume, not just percentage  
+- Align product and lifecycle strategies with observed retention patterns  
 
 ---
 
@@ -10,21 +76,15 @@ The goal of the analysis is to move beyond surface-level metrics and provide a c
 
 ![Dashboard Overview](screenshots/01_dashboard_overview.png)
 
-The dashboard consolidates key subscription health indicators into a single, executive-ready view, allowing stakeholders to quickly assess performance and identify areas of risk or opportunity.
+The dashboard provides a consolidated view of subscription performance, allowing stakeholders to quickly assess overall business health and identify areas of risk or opportunity.
 
 ---
 
-## Key Metrics
+## KPI Summary
 
 ![KPI Summary](screenshots/02_kpi_summary.png)
 
-The KPI section highlights the core indicators used to monitor subscription health:
-
-- Active Subscribers  
-- Monthly Recurring Revenue (MRR)  
-- Churn Rate  
-
-These metrics provide a high-level snapshot of business performance and serve as entry points for deeper analysis within the dashboard.
+Core metrics including subscribers, MRR, and churn rate provide a high-level snapshot of performance and serve as entry points for deeper analysis.
 
 ---
 
@@ -32,7 +92,7 @@ These metrics provide a high-level snapshot of business performance and serve as
 
 ![Monthly MRR Trend](screenshots/03_monthly_mrr_trend.png)
 
-Monthly Active MRR is tracked over time and segmented by subscription plan tier. This view helps identify revenue concentration, compare growth trajectories across plans, and detect early signs of revenue stagnation or decline.
+MRR is tracked over time and segmented by plan tier, enabling comparison of growth trajectories and identification of revenue concentration across plans.
 
 ---
 
@@ -40,9 +100,9 @@ Monthly Active MRR is tracked over time and segmented by subscription plan tier.
 
 ![Retention Curve](screenshots/04_retention_curve.png)
 
-Retention curves are built using cohort-based modeling to show how subscriber engagement decays over time by plan tier.
+Cohort-based retention curves show how subscriber engagement declines over time.
 
-A key insight from this analysis is that retention decay patterns are largely consistent across plans. This suggests that churn timing is more systemic than plan-specific, pointing toward lifecycle, onboarding, or engagement opportunities rather than pricing alone.
+The consistency of retention decay across plans suggests that churn is driven more by lifecycle and engagement factors than pricing differences.
 
 ---
 
@@ -50,47 +110,63 @@ A key insight from this analysis is that retention decay patterns are largely co
 
 ![Churn by Plan Tier](screenshots/05_churn_by_plan.png)
 
-Churned subscriptions are compared across plan tiers to distinguish between relative churn risk and absolute business impact. This separation helps prioritize which plans require attention based on both percentage churn and volume of lost subscriptions.
+Churn is analyzed by plan tier to distinguish between relative churn rates and total business impact.
+
+This helps prioritize retention efforts based on where the largest revenue losses occur.
 
 ---
 
 ## Modeling and Technical Approach
 
-![Retention Curve Worksheet](screenshots/06_retention_curve_by_plan_tier_worksheet.png)
+![Retention Modeling](screenshots/06_retention_curve_by_plan_tier_worksheet.png)
 
-Key analytical techniques used in this project include:
+Key analytical techniques include:
 
-- Cohort-based retention modeling using a Month Index
-- Time-aware subscription activity logic based on start and end dates
-- Executive-focused KPI aggregation
-- Plan-level segmentation to separate churn risk from churn impact
-- Clear distinction between behavioral trends and revenue outcomes
-
-The modeling approach reflects common patterns used in subscription and streaming analytics environments.
+- Cohort-based retention modeling using a Month Index  
+- Time-aware subscription activity logic based on start and end dates  
+- KPI aggregation for executive reporting  
+- Plan-level segmentation to separate churn risk from impact  
+- Distinction between behavioral trends and revenue outcomes  
 
 ---
 
-## Business Use Cases
+## How This Dashboard Is Used
 
-This dashboard can be used to support:
+This dashboard supports decision-making across product, finance, and growth teams.
 
-- Executive subscription health reviews  
-- Product and pricing strategy discussions  
-- Retention and churn risk assessment  
-- Revenue performance monitoring  
+Typical use cases include:
 
----
-
-## Tools and Skills Demonstrated
-
-- Tableau (advanced dashboarding and layout design)
-- Cohort and retention analysis
-- Subscription revenue modeling (MRR, churn)
-- Product and lifecycle analytics
-- Executive data storytelling
+- Monitoring subscription health in executive reviews  
+- Identifying churn drivers and retention opportunities  
+- Evaluating pricing and plan performance  
+- Supporting lifecycle and engagement strategy decisions  
 
 ---
 
-## Summary
+## Business Impact (Simulated)
 
-This project demonstrates the ability to translate subscription data into decision-ready insights by combining retention modeling, revenue analysis, and clear executive reporting within a single dashboard.
+If applied in a production environment, this system would:
+
+- Improve retention strategy by identifying key lifecycle drop-off points  
+- Enable more accurate revenue forecasting through cohort analysis  
+- Support data-driven decisions for pricing, product, and growth initiatives  
+
+---
+
+## Tech Stack
+
+- Tableau  
+- SQL  
+- Data modeling (cohort analysis, MRR calculations)  
+
+---
+
+## Why This Matters
+
+This project reflects how modern subscription and streaming businesses evaluate:
+
+- Revenue growth and monetization  
+- Customer retention and churn behavior  
+- Lifecycle performance across user cohorts  
+
+It is designed to mirror real-world analytics workflows used by subscription-based platforms and media companies.
