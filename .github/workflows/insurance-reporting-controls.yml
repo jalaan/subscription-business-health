@@ -1,0 +1,24 @@
+name: Insurance Reporting Controls - Tests
+
+on:
+  push:
+    paths:
+      - 'projects/auto-insurance-reporting-controls/**'
+      - '.github/workflows/insurance-reporting-controls.yml'
+  pull_request:
+    paths:
+      - 'projects/auto-insurance-reporting-controls/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run automated regression tests
+        run: python -m unittest discover -s projects/auto-insurance-reporting-controls/tests -v
+      - name: Run reporting simulation
+        run: python projects/auto-insurance-reporting-controls/src/pipeline.py --output projects/auto-insurance-reporting-controls/output
