@@ -314,3 +314,9 @@ It is designed to mirror real-world analytics workflows used by subscription-bas
 Tableau dashboard analyzing subscription revenue, Monthly Recurring Revenue, retention, churn behavior, lifecycle performance, and plan-tier risk using cohort-based analytics and revenue performance modeling.
 ```
 Jalaan Fields
+
+---
+
+## Related portfolio project: Insurance reporting controls
+
+[Auto Insurance Reporting Controls — synthetic SQL/Python reconciliation and governance pipeline](projects/auto-insurance-reporting-controls/README.md). An independent educational project demonstrating policy/premium/claims data validation, exception inventories, and reporting control documentation; **not an official NAIC filing**.
